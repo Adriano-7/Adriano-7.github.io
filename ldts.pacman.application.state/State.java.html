@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>State.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package ldts.pacman.application.state;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ldts.pacman.Game;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ldts.pacman.controller.Controller;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ldts.pacman.gui.GUI;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ldts.pacman.view.Viewer;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.sound.sampled.LineUnavailableException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.sound.sampled.UnsupportedAudioFileException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public abstract class State&#60;T&#62; {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final T model;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final Controller&#60;T&#62; controller;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final Viewer&#60;T&#62; viewer;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public State(T model) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.model = model;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.viewer = getViewer();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.controller = getController();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public T getModel() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_23'>1</a>
+<span>
+
+1. getModel : replaced return value with null for ldts/pacman/application/state/State::getModel &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return model;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected abstract Viewer&#60;T&#62; getViewer();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    protected abstract Controller&#60;T&#62; getController();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void step(Game game, GUI gui, long time) throws IOException, UnsupportedAudioFileException, LineUnavailableException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        List&#60;GUI.OPTION&#62; options = gui.getNextOptions();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_29'/>
+29
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_29'>1</a>
+<span>
+
+1. step : removed call to ldts/pacman/controller/Controller::step &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        controller.step(game, options, time);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_30'/>
+30
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_30'>1</a>
+<span>
+
+1. step : removed call to ldts/pacman/view/Viewer::draw &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        viewer.draw(gui);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getModel<br/><b>Killed by : </b>ldts.pacman.application.state.ChooseLevelStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ChooseLevelStateTest]/[method:getModel()]</span></span> replaced return value with null for ldts/pacman/application/state/State::getModel &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_29'>29</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_29'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>step<br/><b>Killed by : </b>none</span></span> removed call to ldts/pacman/controller/Controller::step &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@2fca3eb5_30'>30</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@2fca3eb5_30'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>step<br/><b>Killed by : </b>none</span></span> removed call to ldts/pacman/view/Viewer::draw &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>ldts.pacman.controller.game.ArenaControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.game.ArenaControllerTest]/[method:stepZeroHealth()] (8 ms)</li><li>ldts.pacman.application.state.ScoreMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ScoreMenuStateTest]/[method:step()] (9 ms)</li><li>ldts.pacman.application.state.ScoreMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ScoreMenuStateTest]/[method:getViewer()] (6 ms)</li><li>ldts.pacman.application.state.SaveScoreStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.SaveScoreStateTest]/[method:getViewer()] (8 ms)</li><li>ldts.pacman.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.MainMenuControllerTest]/[method:stepSelectScores()] (5 ms)</li><li>ldts.pacman.application.state.ChooseLevelStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ChooseLevelStateTest]/[method:getViewer()] (4 ms)</li><li>ldts.pacman.controller.menu.ScoreMenuControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.ScoreMenuControllerTest]/[method:stepSelectWithQuit()] (3 ms)</li><li>ldts.pacman.application.state.GameStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.GameStateTest]/[method:testGetModel()] (5 ms)</li><li>ldts.pacman.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.MainMenuControllerTest]/[method:stepSelectStartMulti()] (8 ms)</li><li>ldts.pacman.application.state.ChooseLevelStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ChooseLevelStateTest]/[method:getController()] (5 ms)</li><li>ldts.pacman.application.state.ChooseLevelStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ChooseLevelStateTest]/[method:getModel()] (4 ms)</li><li>ldts.pacman.application.state.SaveScoreStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.SaveScoreStateTest]/[method:getController()] (6 ms)</li><li>ldts.pacman.controller.menu.ScoreMenuControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.ScoreMenuControllerTest]/[method:stepWithQuit()] (4 ms)</li><li>ldts.pacman.controller.menu.ChooseLevelControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.ChooseLevelControllerTest]/[method:stepUpDownQuit()] (6 ms)</li><li>ldts.pacman.application.state.MainMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.MainMenuStateTest]/[method:getController()] (5 ms)</li><li>ldts.pacman.GameTest.[engine:junit-jupiter]/[class:ldts.pacman.GameTest]/[method:nullStateTesting()] (10 ms)</li><li>ldts.pacman.controller.menu.SaveScoreControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.SaveScoreControllerTest]/[method:stepWithQuit()] (7 ms)</li><li>ldts.pacman.application.state.MainMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.MainMenuStateTest]/[method:getModel()] (7 ms)</li><li>ldts.pacman.application.state.MainMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.MainMenuStateTest]/[method:getViewer()] (5 ms)</li><li>ldts.pacman.application.state.GameStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.GameStateTest]/[method:getViewer()] (4 ms)</li><li>ldts.pacman.controller.game.ArenaControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.game.ArenaControllerTest]/[method:quitGame()] (9 ms)</li><li>ldts.pacman.application.state.GameStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.GameStateTest]/[method:getController()] (5 ms)</li><li>ldts.pacman.application.state.ScoreMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ScoreMenuStateTest]/[method:getController()] (8 ms)</li><li>ldts.pacman.application.state.SaveScoreStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.SaveScoreStateTest]/[method:getModel()] (7 ms)</li><li>ldts.pacman.controller.menu.MainMenuControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.MainMenuControllerTest]/[method:stepSelectStartSingle()] (7 ms)</li><li>ldts.pacman.controller.menu.ChooseLevelControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.ChooseLevelControllerTest]/[method:stepSelectLevel()] (15 ms)</li><li>ldts.pacman.controller.menu.ChooseLevelControllerTest.[engine:junit-jupiter]/[class:ldts.pacman.controller.menu.ChooseLevelControllerTest]/[method:stepSelectExit()] (5 ms)</li><li>ldts.pacman.application.state.ScoreMenuStateTest.[engine:junit-jupiter]/[class:ldts.pacman.application.state.ScoreMenuStateTest]/[method:getModel()] (7 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.7.4
+
+</body>
+</html>

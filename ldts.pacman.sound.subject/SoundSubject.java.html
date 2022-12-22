@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>SoundSubject.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package ldts.pacman.sound.subject;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import ldts.pacman.sound.observer.SoundObserver;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.sound.sampled.LineUnavailableException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.sound.sampled.UnsupportedAudioFileException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public abstract class SoundSubject {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    private List&#60;SoundObserver&#62; observers = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void addObserver(SoundObserver observer) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        observers.add(observer);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void removeObserver(SoundObserver observer) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        observers.remove(observer);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void playSingleSound(SoundObserver observer) throws UnsupportedAudioFileException, LineUnavailableException, IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_19'/>
+19
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_19'>1</a>
+<span>
+
+1. playSingleSound : removed call to ldts/pacman/sound/subject/SoundSubject::addObserver &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        addObserver(observer);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_20'/>
+20
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_20'>1</a>
+<span>
+
+1. playSingleSound : removed call to ldts/pacman/sound/subject/SoundSubject::triggerSound &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        triggerSound();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_21'/>
+21
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_21'>1</a>
+<span>
+
+1. playSingleSound : removed call to ldts/pacman/sound/subject/SoundSubject::removeObserver &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        removeObserver(observer);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void triggerSound() throws UnsupportedAudioFileException, LineUnavailableException, IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        for (SoundObserver observer : observers) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_25'/>
+25
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_25'>1</a>
+<span>
+
+1. triggerSound : removed call to ldts/pacman/sound/observer/SoundObserver::onSoundEvent &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            observer.onSoundEvent();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@14a1769d_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@14a1769d_19'>19</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_19'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playSingleSound<br/><b>Killed by : </b>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testGetHeight()]</span></span> removed call to ldts/pacman/sound/subject/SoundSubject::addObserver &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@14a1769d_20'>20</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_20'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playSingleSound<br/><b>Killed by : </b>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testGetHeight()]</span></span> removed call to ldts/pacman/sound/subject/SoundSubject::triggerSound &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@14a1769d_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_21'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>playSingleSound<br/><b>Killed by : </b>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:resetLevel()]</span></span> removed call to ldts/pacman/sound/subject/SoundSubject::removeObserver &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@14a1769d_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@14a1769d_25'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>triggerSound<br/><b>Killed by : </b>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testGetHeight()]</span></span> removed call to ldts/pacman/sound/observer/SoundObserver::onSoundEvent &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testIsWall()] (7 ms)</li><li>ldts.pacman.model.menu.MainMenuTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.MainMenuTest]/[method:testIsSelectedStartMulti()] (3 ms)</li><li>ldts.pacman.model.menu.MainMenuTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.MainMenuTest]/[method:testNext_Op()] (3 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testCollidesWithPacman()] (7 ms)</li><li>ldts.pacman.model.menu.MainMenuTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.MainMenuTest]/[method:isSelectedScores()] (4 ms)</li><li>ldts.pacman.model.game.arena.ArenaLoaderMultiplayerTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaLoaderMultiplayerTest]/[method:arenaElements()] (4 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:noCollectCoin()] (5 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:collectPowerUpFalse()] (5 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testGetHeight()] (3 ms)</li><li>ldts.pacman.model.menu.MainMenuTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.MainMenuTest]/[method:testIsSelectedStartSingle()] (7 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:collectCoin()] (9 ms)</li><li>ldts.pacman.model.menu.ChooseLevelTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.ChooseLevelTest]/[method:isSelectedNext()] (3 ms)</li><li>ldts.pacman.model.menu.MainMenuTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.MainMenuTest]/[method:testIsSelectedExit()] (5 ms)</li><li>ldts.pacman.model.menu.ChooseLevelTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.ChooseLevelTest]/[method:isSelectedExit()] (4 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testSetGetWalls()] (4 ms)</li><li>ldts.pacman.model.game.arena.ArenaLoaderTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaLoaderTest]/[method:arenaElements()] (4 ms)</li><li>ldts.pacman.model.menu.SaveScoreTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.SaveScoreTest]/[method:isSelectedSave()] (3 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testResetPositions()] (8 ms)</li><li>ldts.pacman.GameTest.[engine:junit-jupiter]/[class:ldts.pacman.GameTest]/[method:nullStateTesting()] (10 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:collectPowerUpTrue()] (8 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:resetLevel()] (5 ms)</li><li>ldts.pacman.model.menu.ChooseLevelTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.ChooseLevelTest]/[method:isSelectedPrev()] (3 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testGetCollidingMonster()] (6 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testSetGetMonsters()] (3 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testGetWidth()] (3 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testSetGetPacman()] (4 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testSetGetPowerUp()] (4 ms)</li><li>ldts.pacman.model.game.arena.ArenaTest.[engine:junit-jupiter]/[class:ldts.pacman.model.game.arena.ArenaTest]/[method:testSetGetCoins()] (4 ms)</li><li>ldts.pacman.model.menu.MainMenuTest.[engine:junit-jupiter]/[class:ldts.pacman.model.menu.MainMenuTest]/[method:testPrev_Op()] (3 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.7.4
+
+</body>
+</html>
