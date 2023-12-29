@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     let pageNav = document.querySelector('#navbar');
     let navLinks = pageNav.querySelectorAll('.nav-link');
@@ -23,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navLink.children[0].classList.remove('active'); 
         })
 
-        if (current !== '') { // Changed condition from '===' to '!=='
-            console.log(current);
+        if (current !== '') {
             navLinks.forEach(navLink => {
                 if (navLink.getAttribute('href') === '#' + current) {
                     navLink.children[0].classList.add('active'); 
